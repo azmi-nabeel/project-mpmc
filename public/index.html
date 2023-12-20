@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPMC Project</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/index.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="w-screen h-screen flex flex-row">
+        <div class="w-1/2 p-4 flex flex-col h-full gap-4 items-center">
+            <div class="flex flex-row gap-2 w-full items-center justify-center">
+                <button id="uploadImage" class="rounded-md bg-slate-500 p-2 border-2 border-black hover:bg-slate-600">Upload image</button>
+                <button id="captureImage" class="rounded-md bg-slate-500 p-2 border-2 border-black hover:bg-slate-600">Capture image</button>
+            </div>
+            <div class="h-1/4 w-3/4 flex flex-col items-center justify-center">
+                <img alt="Current Image" id="currImage" class="h-full aspect-auto" />
+            </div>
+            <textarea id="question" class="h-1/4 w-3/4 border-2 border-black p-4 bg-white text-black" placeholder="Question...">Identify the name of the disease the leaf is suffering from</textarea>
+            <textarea id="diagnosis" class="h-1/4 w-3/4 border-2 border-black p-4 bg-white text-black" placeholder="Diagnosis" disabled></textarea>
+        </div>
+        <div class="w-1/2 flex flex-col">
+            <div class="h-1/2 border-l-2 border-dashed border-red-500 p-4">
+                <button onclick="sensor1Click()" class="rounded-md bg-slate-500 p-2 border-2 border-black hover:bg-slate-600 text-lg">Update Sensor 1</button>
+                <div id="sensor1"></div>
+            </div>
+            <div class="h-1/2 border-l-2 border-t-2 border-dashed border-red-500 p-4">
+                <button onclick="sensor2Click()" class="rounded-md bg-slate-500 p-2 border-2 border-black hover:bg-slate-600 text-lg">Update Sensor 2</button>
+                <div id="sensor2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
